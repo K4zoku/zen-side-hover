@@ -1,0 +1,16 @@
+{
+    "id": "sidebar-expand-on-hover",
+    "name": "Sidebar expand on hover",
+    "description": "Sidebar expand on hover, style closest to native Zen",
+    "homepage": "https://github.com/K4zoku/zen-side-hover",
+    "style": "https://raw.githubusercontent.com/K4zoku/zen-side-hover/refs/heads/main/chrome.css",
+    "readme": "https://raw.githubusercontent.com/K4zoku/zen-side-hover/refs/heads/main/README.md",
+    "image": "https://raw.githubusercontent.com/K4zoku/zen-side-hover/refs/heads/main/screenshot.png",
+    "author": "K4zoku",
+    "version": "1.0.0",
+    "fork": ["Zen"],
+    "tags": [
+        "ui",
+        "customization"
+    ]
+}
