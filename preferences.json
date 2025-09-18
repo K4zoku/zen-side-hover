@@ -1,31 +1,7 @@
 [
   {
-    "property": "zen.mods.side-hover.collapsed.essentials",
-    "label": "Choose how to show the essentials in the sidebar when collapsed",
-    "type": "dropdown",
-    "options": [
-      {
-        "label": "Wrap the essentials",
-        "value": "wrap"
-      },
-      {
-        "label": "Show only the first/active essential",   
-        "value": "one"
-      },
-      {
-        "label": "Hide essentails entirely",
-        "value": "hide"
-      },
-      {
-        "label": "Do not change",
-        "value": "untouch"
-      }
-    ],
-    "defaultValue": "one"
-  },
-  {
     "property": "zen.mods.side-hover.collapsed.folders.tree-view",
-    "label": "Choose how to show folders in the sidebar when collapsed",
+    "label": "Add a line that indicate items in folder",
     "type": "checkbox",
     "defaultValue": false
   },
