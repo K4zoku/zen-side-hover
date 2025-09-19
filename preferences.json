@@ -27,7 +27,7 @@
     "property": "zen.mods.side-hover.transition.delay",
     "label": "Transition delay of the sidebar",
     "type": "string",
-    "defaultValue": "50ms"
+    "defaultValue": "500ms"
   },
   {
     "property": "zen.mods.side-hover.transition.function",
@@ -61,7 +61,7 @@
   },
   {
     "property": "zen.mods.side-hover.compat.arc",
-    "label": "Enable some fixes when using with Arc mod",
+    "label": "Enable some fixes when using with Arc mod (maybe work with other theme mods)",
     "type": "checkbox",
     "defaultValue": false
   }  
