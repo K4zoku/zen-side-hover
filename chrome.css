@@ -260,9 +260,7 @@
           --zen-mods-side-hover-transition-delay
         ) !important;
         toolbarbutton:not([active="true"]) {
-          width: fit-content;
-          opacity: 1;
-          transition-property: width, opacity !important;
+          transition-property: visibility, position !important;
           transition-timing-function: var(
             --zen-mods-side-hover-transition-function
           ) !important;
@@ -272,6 +270,7 @@
           transition-delay: var(
             --zen-mods-side-hover-transition-delay
           ) !important;
+          transition-behavior: allow-discrete !important;
         }
       }
     }
@@ -464,8 +463,11 @@
       #zen-workspaces-button {
         gap: 0 !important;
         toolbarbutton:not([active="true"]) {
-          width: 0 !important;
-          opacity: 0 !important;
+          visibility: hidden !important;
+          position: absolute !important;
+          top: 0;
+          left: 0;
+          pointer-events: none;
         }
       }
     }
