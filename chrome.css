@@ -208,7 +208,6 @@
         max-width var(--zen-mods-side-hover-transition-function)
           var(--zen-mods-side-hover-transition-duration)
           var(--zen-mods-side-hover-transition-delay);
-      overflow: hidden !important;
     }
 
     > #nav-bar {
@@ -371,15 +370,19 @@
         var(--zen-mods-side-hover-transition-delay);
     }
 
-    @media (-moz-bool-pref: "zen.mods.side-hover.media-control.hide") {
-      #zen-media-controls-toolbar {
-        opacity: 1 !important;
-        appearance: visible !important;
-        pointer-events: auto !important;
-        transition: opacity var(--zen-mods-side-hover-transition-function)
-          var(--zen-mods-side-hover-transition-duration)
-          var(--zen-mods-side-hover-transition-delay) !important;
-      }
+    #zen-media-controls-toolbar {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition-property: opacity, visibility !important;
+      transition-timing-function: var(
+        --zen-mods-side-hover-transition-function
+      ) !important;
+      transition-duration: var(
+        --zen-mods-side-hover-transition-duration
+      ) !important;
+      transition-delay: var(--zen-mods-side-hover-transition-delay) !important;
+      transition-behavior: allow-discrete !important;
     }
   }
 
@@ -465,9 +468,9 @@
         toolbarbutton:not([active="true"]) {
           visibility: hidden !important;
           position: absolute !important;
-          top: 0;
-          left: 0;
-          pointer-events: none;
+          top: 0 !important;
+          left: 0 !important;
+          pointer-events: none !important;
         }
       }
     }
@@ -478,19 +481,19 @@
       }
     }
 
-    @media (-moz-bool-pref: "zen.mods.side-hover.media-control.hide") {
-      #zen-media-controls-toolbar {
-        opacity: 0 !important;
-        appearance: none !important;
-        pointer-events: none !important;
-      }
-    }
-
-    @media not (-moz-bool-pref: "zen.mods.side-hover.media-control.hide") {
-      #zen-media-focus-button {
-        display: flex !important;
-        transform: translateX(calc(var(--collapsed-tab-bar-width) / 2 - 22px));
-      }
+    #zen-media-controls-toolbar {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      transition-property: opacity, visibility !important;
+      transition-timing-function: var(
+        --zen-mods-side-hover-transition-function
+      ) !important;
+      transition-duration: var(
+        --zen-mods-side-hover-transition-duration
+      ) !important;
+      transition-delay: var(--zen-mods-side-hover-transition-delay) !important;
+      transition-behavior: allow-discrete !important;
     }
 
     toolbarspring {

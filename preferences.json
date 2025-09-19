@@ -1,15 +1,9 @@
 [
   {
     "property": "zen.mods.side-hover.collapsed.folders.tree-view",
-    "label": "Add a line that indicate items in folder",
+    "label": "Add a vertical line for items in Folders when collapsed",
     "type": "checkbox",
     "defaultValue": false
-  },
-  {
-    "property": "zen.mods.side-hover.collapsed.media-control.hide",
-    "label": "Hide media controls when collapsed",
-    "type": "checkbox",
-    "defaultValue": true
   },
   {
     "property": "zen.mods.side-hover.collapsed.bottom.workspaces",
