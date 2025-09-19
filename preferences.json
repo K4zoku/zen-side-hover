@@ -42,6 +42,24 @@
     "defaultValue": false
   },
   {
+    "property": "zen.mods.side-hover.themed-background.transparent",
+    "label": "Enable transparency for themed background",
+    "type": "checkbox",
+    "defaultValue": false
+  },
+  {
+    "property": "zen.mods.side-hover.themed-background.blur",
+    "label": "Enable backdrop blur for themed background with transparency",
+    "type": "checkbox",
+    "defaultValue": false
+  },
+  {
+    "property": "zen.mods.side-hover.themed-background.blur.size",
+    "label": "Backdrop blur size",
+    "type": "string",
+    "defaultValue": "12px"
+  },
+  {
     "property": "zen.mods.side-hover.compat.arc",
     "label": "Enable some fixes when using with Arc mod",
     "type": "checkbox",

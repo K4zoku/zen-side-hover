@@ -138,7 +138,9 @@
     @media (not (-moz-bool-pref: "zen.view.use-single-toolbar")) {
       margin-top: var(--zen-toolbar-height) !important;
       @media (-moz-bool-pref: "zen.mods.side-hover.compat.arc") {
-        margin-top: calc(var(--zen-toolbar-height) + 3px) !important; /* Align to match toolbar height, hardcoded for Arc theme. */
+        margin-top: calc(
+          var(--zen-toolbar-height) + 3px
+        ) !important; /* Align to match toolbar height, hardcoded for Arc theme. */
       }
     }
 
@@ -157,8 +159,13 @@
       inset-inline-end: 0;
       z-index: -2;
       @media (-moz-bool-pref: "zen.mods.side-hover.themed-background") {
-        background: var(--zen-main-browser-background-toolbar) !important;
-        background-attachment: fixed !important;
+        background: var(--zen-main-browser-background-toolbar) fixed !important;
+        @media (-moz-bool-pref: "zen.mods.side-hover.themed-background.transparent") {
+          background: var(--zen-main-browser-background) fixed !important;
+          @media (-moz-bool-pref: "zen.mods.side-hover.themed-background.blur") {
+            backdrop-filter: blur(var(--zen-mods-side-hover-themed-background-blur-size, 20px)) !important;
+          }
+        }
       }
       @media (not (-moz-bool-pref: "zen.mods.side-hover.themed-background")) {
         background: var(--zen-dialog-background) !important;
@@ -174,27 +181,29 @@
           var(--zen-mods-side-hover-transition-delay);
     }
 
-    :root[zen-show-grainy-background="true"] &::after {
-      content: "";
-      position: absolute !important;
-      top: 0;
-      inset-inline-start: 0;
-      bottom: 0;
-      inset-inline-end: 0;
-      width: var(--zen-sidebar-width);
-      background: url(chrome://browser/content/zen-images/grain-bg.png) repeat !important;
-      pointer-events: none;
-      mix-blend-mode: overlay;
-      opacity: 0;
-      z-index: -1;
-      border-start-end-radius: var(--zen-border-radius) !important;
-      border-end-end-radius: var(--zen-border-radius) !important;
-      transition: opacity var(--zen-mods-side-hover-transition-function)
-          var(--zen-mods-side-hover-transition-duration)
-          var(--zen-mods-side-hover-transition-delay),
-        width var(--zen-mods-side-hover-transition-function)
-          var(--zen-mods-side-hover-transition-duration)
-          var(--zen-mods-side-hover-transition-delay);
+    @media not (-moz-bool-pref: "zen.mods.side-hover.themed-background.transparent") and not (-moz-bool-pref: "zen.mods.side-hover.themed-background.blur") {
+      :root[zen-show-grainy-background="true"] &::after {
+        content: "";
+        position: absolute !important;
+        top: 0;
+        inset-inline-start: 0;
+        bottom: 0;
+        inset-inline-end: 0;
+        width: var(--zen-sidebar-width);
+        background: url(chrome://browser/content/zen-images/grain-bg.png) repeat !important;
+        pointer-events: none;
+        mix-blend-mode: overlay;
+        opacity: 0;
+        z-index: -1;
+        border-start-end-radius: var(--zen-border-radius) !important;
+        border-end-end-radius: var(--zen-border-radius) !important;
+        transition: opacity var(--zen-mods-side-hover-transition-function)
+            var(--zen-mods-side-hover-transition-duration)
+            var(--zen-mods-side-hover-transition-delay),
+          width var(--zen-mods-side-hover-transition-function)
+            var(--zen-mods-side-hover-transition-duration)
+            var(--zen-mods-side-hover-transition-delay);
+      }
     }
 
     > #titlebar,
