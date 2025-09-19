@@ -163,7 +163,9 @@
         @media (-moz-bool-pref: "zen.mods.side-hover.themed-background.transparent") {
           background: var(--zen-main-browser-background) fixed !important;
           @media (-moz-bool-pref: "zen.mods.side-hover.themed-background.blur") {
-            backdrop-filter: blur(var(--zen-mods-side-hover-themed-background-blur-size, 20px)) !important;
+            backdrop-filter: blur(
+              var(--zen-mods-side-hover-themed-background-blur-size, 20px)
+            ) !important;
           }
         }
       }
@@ -289,6 +291,12 @@
       }
     }
 
+    .zen-workspace-tabs-section {
+      &:not(.zen-current-workspace-indicator):not(.zen-essentials-container) {
+        gap: var(--zen-toolbox-padding) !important;
+      }
+    }
+
     zen-folder {
       --zen-folder-tree-width: 2px;
       zen-folder {
@@ -300,7 +308,7 @@
       .tab-stack,
       .tab-background,
       .tab-content {
-        min-width: calc(var(--tab-min-width) - 4px) !important;
+        --tab-min-width: 40px;
       }
 
       .tab-group-folder-icon {
@@ -346,6 +354,15 @@
       transition: margin-inline var(--zen-mods-side-hover-transition-function)
         var(--zen-mods-side-hover-transition-duration)
         var(--zen-mods-side-hover-transition-delay) !important;
+
+      @media (-moz-bool-pref: "zen.mods.side-hover.compat.arc") {
+        transition: margin-inline var(--zen-mods-side-hover-transition-function)
+            var(--zen-mods-side-hover-transition-duration)
+            var(--zen-mods-side-hover-transition-delay),
+          box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+          transform 0.24s cubic-bezier(0.22, 1.5, 0.36, 1),
+          opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease !important;
+      }
     }
 
     .tab-reset-pin-button {
