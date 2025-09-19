@@ -1,6 +1,6 @@
 {
-    "id": "sidebar-expand-on-hover",
-    "name": "Sidebar expand on hover",
+    "id": "zen-side-hover",
+    "name": "Zen Side Hover",
     "description": "Sidebar expand on hover, style closest to native Zen",
     "homepage": "https://github.com/K4zoku/zen-side-hover",
     "style": "https://raw.githubusercontent.com/K4zoku/zen-side-hover/refs/heads/main/chrome.css",
