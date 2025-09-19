@@ -39,6 +39,9 @@
   }
 
   #navigator-toolbox {
+    @media (-moz-bool-pref: "zen.mods.side-hover.compat.arc") {
+      padding-left: 0 !important; /* idk why, but it work */
+    }
     z-index: 4 !important;
     width: var(--zen-toolbox-max-width) !important;
     max-width: var(--zen-toolbox-max-width) !important;
@@ -134,6 +137,9 @@
 
     @media (not (-moz-bool-pref: "zen.view.use-single-toolbar")) {
       margin-top: var(--zen-toolbar-height) !important;
+      @media (-moz-bool-pref: "zen.mods.side-hover.compat.arc") {
+        margin-top: calc(var(--zen-toolbar-height) + 3px) !important; /* Align to match toolbar height, hardcoded for Arc theme. */
+      }
     }
 
     :hover {

@@ -40,5 +40,11 @@
     "label": "Use themed background for sidebar",
     "type": "checkbox",
     "defaultValue": false
-  }
+  },
+  {
+    "property": "zen.mods.side-hover.compat.arc",
+    "label": "Enable some fixes when using with Arc mod",
+    "type": "checkbox",
+    "defaultValue": false
+  }  
 ]
