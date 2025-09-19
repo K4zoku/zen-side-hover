@@ -236,7 +236,7 @@
     }
 
     #zen-sidebar-foot-buttons {
-      transition-property: flex-direction;
+      transition-property: flex-direction, justify-content;
       transition-timing-function: var(
         --zen-mods-side-hover-transition-function
       );
