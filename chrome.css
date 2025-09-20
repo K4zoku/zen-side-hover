@@ -265,7 +265,7 @@
 
     @media (-moz-bool-pref: "zen.mods.side-hover.collapsed.bottom.workspaces") {
       #zen-workspaces-button {
-        transition-property: gap !important;
+        transition-property: gap, justify-content !important;
         transition-timing-function: var(
           --zen-mods-side-hover-transition-function
         ) !important;
@@ -275,6 +275,8 @@
         transition-delay: var(
           --zen-mods-side-hover-transition-delay
         ) !important;
+        transition-behavior: allow-discrete !important;
+        
         toolbarbutton:not([active="true"]) {
           transition-property: visibility, position !important;
           transition-timing-function: var(
@@ -309,6 +311,12 @@
       .tab-background,
       .tab-content {
         --tab-min-width: 40px;
+        transition-property: min-width, width;
+        transition-timing-function: var(
+          --zen-mods-side-hover-transition-function
+        );
+        transition-duration: var(--zen-mods-side-hover-transition-duration);
+        transition-delay: var(--zen-mods-side-hover-transition-delay);
       }
 
       .tab-group-folder-icon {
@@ -436,6 +444,12 @@
       .tab-background,
       .tab-content {
         min-width: calc(var(--tab-min-width) - 4px) !important;
+        transition-property: min-width, width;
+        transition-timing-function: var(
+          --zen-mods-side-hover-transition-function
+        );
+        transition-duration: var(--zen-mods-side-hover-transition-duration);
+        transition-delay: var(--zen-mods-side-hover-transition-delay);
       }
       .tab-icon-stack > .tab-icon-image {
         margin-inline: 0 !important;
@@ -472,6 +486,12 @@
       .tab-background,
       .tab-content {
         min-width: var(--tab-min-width) !important;
+        transition-property: min-width, width;
+        transition-timing-function: var(
+          --zen-mods-side-hover-transition-function
+        );
+        transition-duration: var(--zen-mods-side-hover-transition-duration);
+        transition-delay: var(--zen-mods-side-hover-transition-delay);
       }
 
       @media (-moz-bool-pref: "zen.mods.side-hover.collapsed.folders.tree-view") {
@@ -497,6 +517,7 @@
     @media (-moz-bool-pref: "zen.mods.side-hover.collapsed.bottom.workspaces") {
       #zen-workspaces-button {
         gap: 0 !important;
+        justify-content: center !important;
         toolbarbutton:not([active="true"]) {
           visibility: hidden !important;
           position: absolute !important;
