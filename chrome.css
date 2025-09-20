@@ -276,7 +276,7 @@
           --zen-mods-side-hover-transition-delay
         ) !important;
         transition-behavior: allow-discrete !important;
-        
+
         toolbarbutton:not([active="true"]) {
           transition-property: visibility, position !important;
           transition-timing-function: var(
@@ -530,7 +530,7 @@
 
     @media not (-moz-bool-pref: "zen.mods.side-hover.collapsed.bottom.workspaces") {
       #zen-workspaces-button {
-        flex-direction: column !important;
+        flex-direction: column-reverse !important;
       }
     }
 
