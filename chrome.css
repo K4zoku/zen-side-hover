@@ -56,7 +56,10 @@
       );
       transition-duration: var(--zen-mods-side-hover-transition-duration);
       transition-delay: var(--zen-mods-side-hover-transition-delay);
-
+      .zen-current-workspace-indicator-chevron {
+          width: 0 !important;
+          height: 0 !important;
+      }
       .zen-current-workspace-indicator-name {
         transition-property: width;
         transition-timing-function: var(
