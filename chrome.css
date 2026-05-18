@@ -333,33 +333,6 @@
           var(--zen-mods-side-hover-transition-duration)
           var(--zen-mods-side-hover-transition-delay) !important;
       }
-
-      @media (-moz-bool-pref: "zen.mods.side-hover.collapsed.folders.tree-view") {
-        .tab-group-container {
-          position: relative;
-
-          &::after {
-            pointer-events: none;
-            position: absolute;
-            content: "";
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: var(--zen-folder-tree-width);
-            height: 0;
-            opacity: 0;
-            border-radius: var(--zen-folder-tree-width);
-            background-color: var(--color-accent-primary, accentcolor);
-            transition-property: opacity, height;
-            transition-timing-function: var(
-              --zen-mods-side-hover-transition-function
-            );
-            transition-duration: var(--zen-mods-side-hover-transition-duration);
-            transition-delay: var(--zen-mods-side-hover-transition-delay);
-          }
-        }
-      }
     }
     .tabbrowser-tab {
       transition: margin-inline var(--zen-mods-side-hover-transition-function)

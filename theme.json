@@ -7,7 +7,7 @@
     "readme": "https://raw.githubusercontent.com/K4zoku/zen-side-hover/refs/heads/main/README.md",
     "image": "https://raw.githubusercontent.com/K4zoku/zen-side-hover/refs/heads/main/screenshot.png",
     "author": "K4zoku",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "fork": ["Zen"],
     "tags": [
         "ui",

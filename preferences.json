@@ -1,11 +1,5 @@
 [
   {
-    "property": "zen.mods.side-hover.collapsed.folders.tree-view",
-    "label": "Add a vertical line for items in Folders when collapsed",
-    "type": "checkbox",
-    "defaultValue": false
-  },
-  {
     "property": "zen.mods.side-hover.collapsed.bottom.workspaces",
     "label": "Collapse the buttons to only show current workspace",
     "type": "checkbox",
@@ -27,7 +21,7 @@
     "property": "zen.mods.side-hover.transition.delay",
     "label": "Transition delay of the sidebar",
     "type": "string",
-    "defaultValue": "500ms"
+    "defaultValue": "400ms"
   },
   {
     "property": "zen.mods.side-hover.transition.function",
@@ -64,5 +58,5 @@
     "label": "Enable some fixes when using with Arc mod (maybe work with other theme mods)",
     "type": "checkbox",
     "defaultValue": false
-  }  
+  }
 ]
